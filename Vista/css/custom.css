@@ -1,0 +1,19 @@
+#head{
+    background-color: blue;
+    padding: 0.3em
+}
+
+#content{
+    height: 40em;
+    background-color: #f3f3f3;
+    padding-top: 10px
+}
+
+.thumbnail{
+    margin: 5px 5px;
+    height: 5em 
+}
+
+#thumbnailAddBoard{
+    padding-top: 0.7em
+}

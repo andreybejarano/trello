@@ -6,7 +6,6 @@ angular
 function principal($http) {
     var vm = this;
     vm.datos = {};
-    vm.datosTablero = {};
 
     vm.listarTableros = function () {
         $http.get("http://localhost/trello/tablero/getBoards")

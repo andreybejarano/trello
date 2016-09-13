@@ -11,10 +11,10 @@
     <body class="container-fluid">
         <div class="row" id="head">
             <div class="col-xs-3">
-                <label>Tableros</label>
+                <h5 class="titulo"><strong>Tableros</strong></h5>
             </div>
             <div class="col-xs-6 text-center">
-                <label>Trello</label>
+                <h4 class="titulo"><strong>Trello</strong></h4>
             </div>
             <div class="col-xs-3">
                 <div class="input-group">
@@ -54,7 +54,7 @@
                                 <form ng-submit="vm.crearTablero()" id="frmAddBoard">
                                     <div class="form-group">
                                         <label for="txfNameBoard">Nombre tablero</label>
-                                        <input ng-model="vm.datos.nombreTablero" type="text" class="form-control" id="txfNameBoard" name="txfNameBoard" placeholder="NombreTablero">
+                                        <input ng-model="vm.datos.nombreTablero" type="text" autocomplete="off" class="form-control" id="txfNameBoard" name="txfNameBoard" placeholder="NombreTablero">
                                     </div>
                                     <button type="submit" id="btnAddBoard" class="btn btn-primary">Añadir</button>
                                 </form>
@@ -73,7 +73,7 @@
                                 <form ng-submit="vm.editarTablero()" id="frmEditBoard">
                                     <div class="form-group">
                                         <label for="txfNameBoard">Nombre tablero</label>
-                                        <input ng-model="vm.nombreTablero" type="text" class="form-control" id="txfEditNameBoard" name="txfEditNameBoard" placeholder="NombreTablero">
+                                        <input ng-model="vm.nombreTablero" type="text" autocomplete="off" class="form-control" id="txfEditNameBoard" name="txfEditNameBoard" placeholder="NombreTablero">
                                     </div>
                                     <button type="submit" id="btnEditBoard" class="btn btn-primary">Editar</button>
                                 </form>

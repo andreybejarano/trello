@@ -1,0 +1,21 @@
+<div class="modal fade" id="modalAddBoard" tabindex="-1" role="dialog" aria-labelledby="modalAddBoardLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalAddBoardLabel">Añadir tablero</h4>
+            </div>
+            <form ng-submit="vm.crearTablero()" id="frmAddBoard">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="txfNameBoard">Nombre tablero</label>
+                        <input ng-model="vm.datos.nombreTablero" type="text" autocomplete="off" class="form-control" id="txfNameBoard" name="txfNameBoard" placeholder="NombreTablero">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class=" btn btn-default" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">Cerrar</span></button>
+                    <button type="submit" id="btnAddBoard" class="btn btn-primary">Añadir</button>
+                </div>
+        </div>
+    </div>
+</div>

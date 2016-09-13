@@ -27,11 +27,15 @@ class Controlador {
             $nombreControlador = $_GET['controlador'] . 'Controlador';
         else
             $nombreControlador = CONTROLADOR_PRINCIPAL . 'Controlador';
-
+        
         if (!empty($_GET['metodo']))
             $nombreMetodo = $_GET['metodo'];
         else
             $nombreMetodo = 'principal';
+        
+        if (!empty($_GET['datos'])) 
+            $datos = $_GET['datos'];
+            
 
         //Construimos la Ruta del Controlador
         $rutaControlador = DIRECTORIO_CONTROLADORES . $nombreControlador . '.php';

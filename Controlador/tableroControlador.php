@@ -17,7 +17,24 @@ class tableroControlador {
         $this->modelo->setNombreTablero($datos->nombreTablero);
         echo $this->modelo->insertarTablero();
     }
-
+    
+    public function listGet() {
+        echo "<pre>";
+        print_r($_GET);
+    }
+    
+    public function modalAddBoard() {
+        Vista::mostrar('modalCrearTablero');
+    }
+    
+    public function modalEditBoard() {
+        Vista::mostrar('modalEditBoard');
+    }
+    
+    public function modalDeleteBoard() {
+        Vista::mostrar('modalDeleteBoard');
+    }
+    
     public function getBoards() {
         echo json_encode($this->modelo->listarTableros());
     }

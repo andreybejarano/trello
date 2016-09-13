@@ -1,7 +1,5 @@
-
-angular
-        .module('modTableros', [])
-        .controller('tablerosCtrl', ['$http', principal]);
+var app = angular.module('modTableros', []);
+app.controller('tablerosCtrl', ['$http', principal]);
 
 function principal($http) {
     var vm = this;
@@ -16,18 +14,23 @@ function principal($http) {
                 );
     }
 
+    vm.frmCrearTablero = function () {
+        $("#modalAddBoard").modal("show");
+    }
+
     vm.crearTablero = function () {
         $http.post("http://localhost/trello/tablero/postBoard", vm.datos)
                 .then(
                         function (respuesta) {
-                            vm.listarTableros();
                             $("#modalAddBoard").modal("hide");
                             vm.datos.nombreTablero = '';
+                            vm.listarTableros();
                         }
                 );
     }
 
     vm.leerDatosTablero = function (idTablero) {
+        vm.tituloModal = 'Editar tablero';
         $http.post("http://localhost/trello/tablero/getIdBoard", {idTablero: idTablero})
                 .success(
                         function (respuesta) {
@@ -62,10 +65,10 @@ function principal($http) {
                                 vm.listarTableros();
                             }
                     ).error(
-                            function (respuesta) {
-                                console.log(respuesta);
-                            }
-                    );
+                    function (respuesta) {
+                        console.log(respuesta);
+                    }
+            );
         }
     }
 

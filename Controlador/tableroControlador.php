@@ -8,7 +8,7 @@ class tableroControlador {
         $this->modelo = Modelo::cargar("tableros");
     }
 
-    public function tableros() {
+    public function principal() {
         Vista::mostrar('tableros');
     }
 
